@@ -1,2 +1,3 @@
 #!/bin/bash
-echo "Kali"
+. /etc/os-release && echo "${ID^}"
+
