@@ -1,2 +1,3 @@
 #!/bin/bash
-ssh-keygen -t rsa -b 4096 -f "$1" -N ""
+[ "$(sha256sum $1 | cut -d' ' -f1)" = "$2" ] && echo "$1: OK" || echo "$1: FAIL"
+
