@@ -1,3 +1,2 @@
 #!/bin/bash
-last -n 5
-
+last -n 6 | grep -v "reboot" | head -n 5
