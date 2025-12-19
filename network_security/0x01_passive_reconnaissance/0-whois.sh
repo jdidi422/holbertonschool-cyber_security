@@ -5,7 +5,6 @@ domain="$1"
 whois "$domain" | awk -F: '
 BEGIN { sec="" }
 
-# detect section
 /^Registrant / { sec="Registrant" }
 /^Admin /      { sec="Admin" }
 /^Tech /       { sec="Tech" }
@@ -38,7 +37,7 @@ END {
         print s " Phone Ext:,";
         print s " Fax," fax[s]
         print s " Fax Ext:,";
-        print s " Email," email[s]
+        print s " Email," email[s] # هذا يضمن Email Tech موجود
     }
 }
 ' > "$domain.csv"
