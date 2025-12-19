@@ -1,2 +1,1 @@
-cyber_netsec_0x01{FLAG_HERE}
-
+cyber_netsec_0x01{dns_txt_records_are_cool}
