@@ -1,2 +1,1 @@
-#!/bin/bash
-cat dmesg | grep -m1 "Linux version" | cut -d' ' -f3
+grep -m1 "Linux version" dmesg | sed -n 's/.*(Ubuntu \(.*\)).*/\1/p'
