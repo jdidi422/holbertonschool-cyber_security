@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -m1 "Linux version" dmesg | awk '{print $3}'
+cat dmesg | grep -m1 "Linux version" | cut -d' ' -f3
